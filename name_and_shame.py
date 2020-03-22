@@ -67,5 +67,4 @@ def process_listings(listings):
 if __name__ == "__main__":
     listings = find(EBAY_CATEGORY_MAP["toilet paper"])
     gougers = process_listings(listings)
-
-pretty_please(gougers)
+    pretty_please(gougers)

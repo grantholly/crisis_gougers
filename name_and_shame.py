@@ -33,12 +33,12 @@ def pretty_please(d):
 
 api = Connection(appid=APPID, config_file=None, debug=True)
 
-def find(category_id):
+def find(keyword, category_id):
     req_params = {
-        "keywords": "toilet paper",
+        "keywords": keyword,
         "sortOrder": "PricePlusShippingHighest",
         "outputSelector": "SellerInfo",
-        "categoryId": 179204,
+        "categoryId": category_id,
     }
 
     res = api.execute("findItemsAdvanced", req_params)
@@ -65,6 +65,6 @@ def process_listings(listings):
     )
 
 if __name__ == "__main__":
-    listings = find(EBAY_CATEGORY_MAP["toilet paper"])
+    listings = find("toilet paper", EBAY_CATEGORY_MAP["toilet paper"])
     gougers = process_listings(listings)
     pretty_please(gougers)

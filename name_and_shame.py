@@ -20,7 +20,11 @@ things_people_need
     "hydrogen peroxide",
     "antiseptic",
     "paper towels",
-
+    "diapers",
+    "formula",
+    "tampons",
+    "pads",
+    
 """
 
 APPID = os.environ["EBAY_APPID"]

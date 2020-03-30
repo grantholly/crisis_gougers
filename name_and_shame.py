@@ -72,3 +72,4 @@ if __name__ == "__main__":
     listings = find("toilet paper", EBAY_CATEGORY_MAP["toilet paper"])
     gougers = process_listings(listings)
     pretty_please(gougers)
+    print(f"found {len(gougers)} gougers")
